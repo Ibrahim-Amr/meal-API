@@ -1,0 +1,254 @@
+body {
+	font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #2d2013;
+	color: white;
+	overflow: hidden;
+}
+
+#loading {
+	position: fixed;
+	inset: 0 0 0 0;
+	background-color: rgb(29, 29, 29);
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 5;
+}
+
+.sk-folding-cube {
+	margin: 20px auto;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+	float: left;
+	width: 50%;
+	height: 50%;
+	position: relative;
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.sk-folding-cube .sk-cube:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(114, 114, 114);
+	-webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+	animation: sk-foldCubeAngle 2.4s infinite linear both;
+	-webkit-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+.sk-folding-cube .sk-cube2 {
+	-webkit-transform: scale(1.1) rotateZ(90deg);
+	transform: scale(1.1) rotateZ(90deg);
+}
+
+.sk-folding-cube .sk-cube3 {
+	-webkit-transform: scale(1.1) rotateZ(180deg);
+	transform: scale(1.1) rotateZ(180deg);
+}
+
+.sk-folding-cube .sk-cube4 {
+	-webkit-transform: scale(1.1) rotateZ(270deg);
+	transform: scale(1.1) rotateZ(270deg);
+}
+
+.sk-folding-cube .sk-cube2:before {
+	-webkit-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+.sk-folding-cube .sk-cube3:before {
+	-webkit-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+}
+
+.sk-folding-cube .sk-cube4:before {
+	-webkit-animation-delay: 0.9s;
+	animation-delay: 0.9s;
+}
+
+@-webkit-keyframes sk-foldCubeAngle {
+	0%,
+	10% {
+		-webkit-transform: perspective(140px) rotateX(-180deg);
+		transform: perspective(140px) rotateX(-180deg);
+		opacity: 0;
+	}
+
+	25%,
+	75% {
+		-webkit-transform: perspective(140px) rotateX(0deg);
+		transform: perspective(140px) rotateX(0deg);
+		opacity: 1;
+	}
+
+	90%,
+	100% {
+		-webkit-transform: perspective(140px) rotateY(180deg);
+		transform: perspective(140px) rotateY(180deg);
+		opacity: 0;
+	}
+}
+
+@keyframes sk-foldCubeAngle {
+	0%,
+	10% {
+		-webkit-transform: perspective(140px) rotateX(-180deg);
+		transform: perspective(140px) rotateX(-180deg);
+		opacity: 0;
+	}
+
+	25%,
+	75% {
+		-webkit-transform: perspective(140px) rotateX(0deg);
+		transform: perspective(140px) rotateX(0deg);
+		opacity: 1;
+	}
+
+	90%,
+	100% {
+		-webkit-transform: perspective(140px) rotateY(180deg);
+		transform: perspective(140px) rotateY(180deg);
+		opacity: 0;
+	}
+}
+
+#sidebar {
+	width: 200px;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	left: -145px;
+	transition: left 0.5s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 4;
+}
+
+#sidebar.visible {
+	left: 0px;
+	transition: left 0.7s ease;
+}
+
+#ul {
+	background: #b6851d7c;
+}
+
+#sidebar ul {
+	display: none;
+	opacity: 1;
+	margin: 0;
+	padding: 0;
+}
+
+#sidebar li {
+	cursor: pointer;
+	list-style: none;
+	padding: 10px 0 10px 10px;
+	background: #b6851d7c;
+	color: white;
+	border-bottom: 1px solid #233140;
+}
+
+#sidebar-btn {
+	/* display: inline-block; */
+	/* vertical-align: middle; */
+	width: 35px;
+	height: 30px;
+	cursor: pointer;
+	margin: 20px;
+	right: -45px;
+	top: 0px;
+}
+
+#sidebar-btn span {
+	background-color: white;
+	height: 1px;
+	display: block;
+	margin-bottom: 5px;
+}
+
+#sidebar-btn span:nth-child(2) {
+	width: 75%;
+}
+
+#sidebar-btn span:nth-child(3) {
+	width: 75%;
+}
+
+.item {
+	cursor: pointer;
+}
+
+.meal-Info {
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: all 1s;
+	border-radius: 5px;
+}
+
+.item:hover .meal-Info {
+	opacity: 1;
+	top: 0;
+}
+
+.meal-Info h2 {
+	color: #000;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+.meal-Info p {
+	color: #000;
+	font-weight: 800;
+}
+
+#recipes {
+	list-style: none;
+}
+
+#recipes li {
+	background-color: white;
+	color: black;
+}
+
+#tags {
+	list-style: none;
+}
+
+#tags li {
+	background-color: white;
+	color: black;
+}
+
+#city {
+	cursor: pointer;
+}
+
+.meal {
+	cursor: pointer;
+	background-color: #24190e;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Free Meal</title>
+		<link rel="stylesheet" href="css/all.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<section id="loading" class="">
+			<div class="sk-folding-cube">
+				<div class="sk-cube1 sk-cube"></div>
+				<div class="sk-cube2 sk-cube"></div>
+				<div class="sk-cube4 sk-cube"></div>
+				<div class="sk-cube3 sk-cube"></div>
+			</div>
+		</section>
+		<!-- SIDE BAR -->
+		<div id="sidebar" class="">
+			<div class="w-100" id="ul">
+				<ul id="sideUL">
+					<li onclick="displaySearch()">Search</li>
+					<li onclick="displayCategories()">Categories</li>
+					<li onclick="displayArea()">Area</li>
+					<li onclick="getIngredients()">Ingredients</li>
+					<li onclick="displayContact()">Contact Us</li>
+				</ul>
+			</div>
+
+			<div id="sidebar-btn">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<!-- NAIN SECTION -->
+		<div class="container py-3">
+			<!-- Main SECTION Section -->
+			<section class="text-center my-1 p-5" id="hideMain">
+				<!-- SEARCH SECTION -->
+				<div class="row mb-5 d-none" id="searchSection">
+					<div class="col-md-6">
+						<input id="searchName" class="form-control mb-2"
+							placeholder="Search By Name" />
+					</div>
+					<div class="col-md-6">
+						<input id="searchLetter" class="form-control" type="text"
+							maxlength="1" placeholder="search By First Letter..." />
+					</div>
+				</div>
+				<!-- MEAL DISPLAY -->
+				<div class="row gy-3 gx-5" id="mainSection"></div>
+				<!-- SEARCH DISPLAY -->
+				<div class="row" id="searchContainer"></div>
+			</section>
+			<!-- Contact SECTION -->
+			<section class="text-center my-1 p-5 d-none" id="hideContact">
+				<div class="row gy-3 gx-5" id="mainSection">
+					<div class="contactForm">
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<input type="text" name="uName" id="userName"
+									class="form-control ms-auto"
+									placeholder="Enter Your Name " />
+								<p class="text-danger m-0 fw-bold text-start d-none"
+									id="NameAlert">Name must atleast have have 1 char</p>
+							</div>
+							<div class="col-md-6 mb-3">
+								<input type="text" name="uEmail" id="userEmail"
+									class="form-control me-auto"
+									placeholder="Enter Email " />
+								<p class="text-danger m-0 fw-bold text-start d-none"
+									id="mailAlert">Enter valid email. *Ex: xxx@yyy.zzz
+								</p>
+							</div>
+							<div class="col-md-6 mb-3">
+								<input type="text" name="uPhone" id="userPhone"
+									class="form-control ms-auto"
+									placeholder="Phone Number" />
+								<p class="text-danger m-0 fw-bold text-start d-none"
+									id="phoneAlert">Enter valid Phone Number</p>
+							</div>
+							<div class="col-md-6 mb-3">
+								<input type="text" name="uAge" id="userAge"
+									class="form-control me-auto"
+									placeholder="Enter Age " />
+								<p class="text-danger m-0 fw-bold text-start d-none"
+									id="ageAlert">Enter valid Age</p>
+							</div>
+							<div class="col-md-6 mb-3">
+								<input type="text" name="uPass" id="userPass"
+									class="form-control ms-auto"
+									placeholder="Enter Password " />
+								<p class="text-danger m-0 fw-bold text-start d-none"
+									id="passAlert">
+									Enter valid password *Minimum eight characters, at
+									least one letter and one number:*
+								</p>
+							</div>
+							<div class="col-md-6 mb-3">
+								<input type="text" name="uRePass" id="userRePass"
+									class="form-control me-auto"
+									placeholder="Re Enter Password " />
+								<p class="text-danger m-0 fw-bold text-start d-none"
+									id="rePassAlert">Both passwords are not matched</p>
+							</div>
+							<p class="text-success fw-bolder d-none" id="success">
+								Registration completed successfully</p>
+								<p class="text-danger fw-bolde d-none" id="invalidEmail">Email Already in Use, Use Onther Email</p>
+							<div>
+								<button class="btn btn-success disabled"
+									id="submetData">Submet</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<script src="js/jquery-3.6.1.min.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+
+</html>
