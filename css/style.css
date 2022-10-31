@@ -190,7 +190,7 @@ body {
 	width: 75%;
 }
 
-.item {
+.meal {
 	cursor: pointer;
 }
 
@@ -210,7 +210,7 @@ body {
 	border-radius: 5px;
 }
 
-.item:hover .meal-Info {
+.meal:hover .meal-Info {
 	opacity: 1;
 	top: 0;
 }
